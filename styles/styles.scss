@@ -6,22 +6,45 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: 'Raleway', sans-serif;
 	// font-family: 'Roboto', sans-serif;
-	font-family: 'Open Sans', sans-serif;
+	// font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
 	text-transform: uppercase;
+	scroll-behavior: smooth;
+}
+
+
+.container{
+	width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        width: 90% !important;
+    }
 }
 
 @media screen and (max-width: 993px) {
 	.container{
-			padding: 0;
-			overflow-x: hidden;
+	padding: 0;
+	overflow-x: hidden;
 	}
 }
 
 @media (max-width: 576px){
 	.container{
-		max-width: 100%;
+		width: 100% !important;
+	}
+
+	h2{
+		font-size: 1.7rem !important;
+	}
+
+	h3{
+		font-size: 1.3rem !important;
 	}
 }
 
@@ -130,18 +153,21 @@ nav{
 	}
 
 	h1{
-		font-size: 48px;
+		font-size: 38px;
 		text-align: center;
+		font-weight: 600;
+		margin-bottom: 0px !important;
 		@media screen and (max-width: 450px){
 			font-size: 28px;
-			margin-bottom: 35px;
+			margin-bottom: 35px !important;
 		}
 	}
 
 	p{
 		text-align: center;
-		font-size: 24px;
-		font-weight: 400;
+		font-size: 18px;
+		font-weight: 500;
+		color: var(--primary);
 		@media screen and (max-width: 450px){
 			font-size: 16px;
 		}
@@ -149,7 +175,7 @@ nav{
 	button{
 		width: 550px;
 		height: 50px;
-		margin-top: 70px;
+		margin-top: 100px;
 		border: none;
 		background-color: var(--secondary);
 		color: #fff;
@@ -169,25 +195,25 @@ nav{
 }
 
 .hero__contacts_info{
-	margin-top: 70px;
+	margin-top: 25px;
 
 	p{
 		font-size: 16px;
-	}
-
-	@media screen and (max-width: 450px){
-		margin-top: 35px;
+		font-weight: 600;
 	}
 }
 main h2{
-	text-align: center;
 	margin: 50px auto;
 	color: #636363;
+	padding-left: 48px;
+	@media screen and (max-width: 768px){
+		padding-left: 16px !important;
+	}
 }
 
 .section_intro{
-	height: 85vh;
-	max-height: 700px;
+	// height: 85vh;
+	// max-height: 700px;
 	p{
 		font-size: 14px;
 	}
@@ -200,10 +226,41 @@ main h2{
 .section_intro__info{
 	width: 60%;
 	background-color: #F9F9F9;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-	div{
-		margin-bottom: 50px;
+	h3{
+		font-weight: 500;
+		width: 70%;
+		@media screen and (max-width: 993px){
+			margin-bottom: 50px;
+			width: 100%;
+		}
+
 	}
+
+
+	h4 {
+		font-weight: 600;
+		font-size: 20px;
+	}
+
+	p{
+		margin-top: 30px;
+		text-transform: lowercase;
+		font-size: 20px;
+	}
+
+	a{
+		text-decoration: none;
+		color: var(--primary);
+		&:hover{
+			color: var(--secondary);
+		}
+	}
+
+
 	@media screen and (max-width: 993px){
 		width: 100%;
 	}
@@ -241,7 +298,7 @@ main h2{
 		h3{
 			text-align: center;
 			color: #fff;
-			margin-bottom: 70px;
+			margin-bottom: 40px;
 			@media screen and (max-width: 450px){
 				margin-bottom: 35px;
 			}
@@ -260,31 +317,133 @@ main h2{
 			}
 		}
 
-		button{
+		button, a{
 			width: 100%;
 			height: 50px;
 			border: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			border-radius: 10px;
 			background-color: var(--secondary);
-			color: #fff;
+			color: #fff !important;
 			text-transform: uppercase;
+			cursor: pointer;
 			transition: all .5s;
-
 			&:hover{
 				box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 			}
 			&:last-child{
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				@media screen and (max-width: 993px){
-					position: static;
-					margin-top: 20px;
-				}
+				// position: absolute;
+				// bottom: 0;
+				// left: 0;
+				// @media screen and (max-width: 993px){
+				// 	position: static;
+				// 	margin-top: 20px;
+				// }
+
+				margin-top: 50px;
 
 			}
 		}
 	}
+}
+
+.section__features_choose{
+	background-color: #F9F9F9;
+	h3{
+		padding: 48px;
+		@media screen and (max-width: 768px){
+			padding: 48px 16px !important;
+		}
+		span{
+			display: block;
+		}
+	}
+	.features_control{
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: 993px){
+			flex-direction: column;
+		}
+	}
+	.features_control ul{
+		width: 30%;
+		list-style: none;
+		padding-left: 0 !important;
+
+		@media screen and (max-width: 993px){
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		li{
+			width: 100%;
+			height: 100px;
+			background-color: var(--primary);
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 10px;
+			cursor: pointer;
+			font-size: 20px;
+			font-weight: 500;
+			transition: all 0.3s;
+			&:hover{
+				background-color: var(--secondary);
+			}
+			@media screen and (max-width: 993px){
+				margin: 0 5px;
+				width: 32%;
+				font-size: 12px;
+			}
+
+		}
+	}
+
+	.features_control .carousel{
+		width: 65% !important;
+		position: relative;
+		@media screen and (max-width: 993px){
+			width: 100% !important;
+		}
+		img{
+			height: 400px !important;
+			object-fit: cover;
+			@media screen and (max-width: 700px){
+				height: 500px !important;
+			}
+
+		}
+		p{
+			top: 50%;
+			font-size: 18px;
+			transform: translateY(-50%);
+			position: absolute;
+			color: #fff;
+			z-index: 999;
+			left: 0; 
+			right: 0; 
+			margin-left: auto; 
+			margin-right: auto; 
+			@media screen and (max-width: 700px){
+				font-size: 14px !important;
+			}
+		}
+	}
+}
+
+.carousel-item::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	background-color: rgba(0,0,0,0.7);
 }
 
 .section__features_item{
@@ -349,10 +508,12 @@ main h2{
 
 .section__service_price h5{
 	font-weight: bold;
+	padding: 0 10px;
 }
 
 .section__service_price ul{
 	list-style: none;
+
 
 	li{
 		display: flex;
@@ -370,6 +531,11 @@ main h2{
 		&:hover{
 			background-color: var(--secondary);
 		}
+		@media screen and (max-width: 550px){
+			font-size: 12px;
+			width: 95%;
+			text-align: center;
+		}
 	}
 }
 
@@ -378,6 +544,7 @@ main h2{
 	width: 320px;
 	background-color: var(--secondary);
 }
+
 .section__service_price_input{
 	border-radius: 10px;
 	display: flex;
@@ -397,6 +564,7 @@ main h2{
 }
 
 .section__service_price form{
+
 	input{
 		height: 50px;
 		margin-bottom: 20px;
@@ -410,6 +578,7 @@ main h2{
 	}
 
 	button{
+		margin-top: 50px;
 		height: 50px;
 		border-radius: 10px;
 		border: none;
@@ -471,3 +640,6 @@ footer{
 	}
 }
 
+.selected{
+	background-color: var(--secondary) !important;
+}
