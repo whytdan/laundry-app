@@ -173,6 +173,7 @@ nav{
 		}
 	}
 	button{
+		cursor: pointer;
 		width: 550px;
 		height: 50px;
 		margin-top: 100px;
@@ -602,7 +603,7 @@ footer{
 	h4{
 		font-weight: 300;
 		text-align: center;
-		@media screen and (max-width: 450px){
+		@media screen and (max-width: 576px){
 			text-align: left;
 			margin-bottom: 30px;
 		}
@@ -622,6 +623,15 @@ footer{
 			color: #636363;
 			margin-bottom: 5px;
 			cursor: pointer;
+		}
+	}
+
+	a{
+		text-decoration: none;
+		color: #636363;
+		&:hover{
+			text-decoration: none;
+			color: var(--secondary);
 		}
 	}
 

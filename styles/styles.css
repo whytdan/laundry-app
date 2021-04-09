@@ -194,6 +194,7 @@ nav .nav__inner_right ul li:hover::after {
 }
 
 .hero button {
+  cursor: pointer;
   width: 550px;
   height: 50px;
   margin-top: 100px;
@@ -720,7 +721,7 @@ footer h4 {
   text-align: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 576px) {
   footer h4 {
     text-align: left;
     margin-bottom: 30px;
@@ -742,6 +743,16 @@ footer ul li {
   color: #636363;
   margin-bottom: 5px;
   cursor: pointer;
+}
+
+footer a {
+  text-decoration: none;
+  color: #636363;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: var(--secondary);
 }
 
 footer button {
