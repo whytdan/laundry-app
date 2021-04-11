@@ -14,19 +14,37 @@
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet"> -->
 
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		crossorigin="anonymous"></script>
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+		crossorigin="anonymous"></script>
 
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./styles/styles.css">
+
+	<!-- jQuery Mask -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+		integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+		crossorigin="anonymous"></script>
+
+	<!-- sweetalert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </head>
 
 <body>
@@ -87,9 +105,9 @@
 					<p><span style="color: #000;">Тел:</span> +7(495)231-09-40</p>
 				</div>
 
-				<button>
+				<a href="#calculator">
 					Рассчитать стоимость услуг
-				</button>
+				</a>
 			</div>
 		</div>
 	</header>
@@ -101,7 +119,8 @@
 			<div class="section_intro__info p-3 p-md-5">
 
 				<div>
-					<h3>Просто свяжитесь с нами и наши менеджеры зададут все необходимые вопросы и озвучат условия работы</h3>
+					<h3>Просто свяжитесь с нами и наши менеджеры зададут все необходимые вопросы и озвучат условия
+						работы</h3>
 				</div>
 
 				<div>
@@ -111,51 +130,65 @@
 				</div>
 			</div>
 			<div class="section_intro__form p-3 py-5 p-md-5">
-				<form>
+				<form id="form1">
 					<h3>Напишите нам</h3>
-					<input name="fullName" type="text" placeholder="Имя">
-					<input name="phoneNumber" type="text" placeholder="Телефон">
-					<button>Отправить</button>
-					<a>Рассчитать стоимость услуг</a>
+					<input name="fullName" type="text" placeholder="Имя" required>
+					<input id="phoneNumber1" name="phoneNumber" type="text" placeholder="Телефон" required>
+					<button type="submit">Отправить</button>
+					<a href="#calculator">Рассчитать стоимость услуг</a>
 				</form>
 			</div>
 		</section>
 
 		<h2 id="how_we_work">Как мы работаем?</h2>
-		
+
 		<section class="section__features_choose">
-			<h3> <span>Поговорим о нашей технологии</span> перед тем как вернуть вам обратно чистое и отглаженное белье, <span>оно проходит несколько этапов обработки</span> </h3>
+			<h3> <span>Поговорим о нашей технологии</span> перед тем как вернуть вам обратно чистое и отглаженное белье,
+				<span>оно проходит несколько этапов обработки</span>
+			</h3>
 
 			<div class="features_control">
 				<ul>
 					<li class="selected" data-target="#myCarousel" data-slide-to="0">Сортировка</li>
 					<li data-target="#myCarousel" data-slide-to="1" onclick="changeCarouselSlide(1)">Стирка</li>
-					<li data-target="#myCarousel" data-slide-to="2" onclick="changeCarouselSlide(2)" class="text-center d-none d-sm-flex">Сушка и глажка</li>
-					<li data-target="#myCarousel" data-slide-to="2" onclick="changeCarouselSlide(2)" class="text-center d-flex d-sm-none">Сушка <br> и <br> глажка</li>
+					<li data-target="#myCarousel" data-slide-to="2" onclick="changeCarouselSlide(2)"
+						class="text-center d-none d-sm-flex">Сушка и глажка</li>
+					<li data-target="#myCarousel" data-slide-to="2" onclick="changeCarouselSlide(2)"
+						class="text-center d-flex d-sm-none">Сушка <br> и <br> глажка</li>
 				</ul>
 
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active" data-interval="10000">
 							<img src="./assets/images/sort.jpeg" class="d-block w-100" alt="towels-sorting-image">
-							<p class="p-4">Перед тем как отправить белье в стирку, либо начать процесс замачивания его необходимо
-								отсортировать по нескольким корзинам, так как изделия разного материала, его плотности, а так же
-								разного цвета и фасона требует индивидуального подхода не только при стирке, отжиме и сушке белья,
+							<p class="p-4">Перед тем как отправить белье в стирку, либо начать процесс замачивания его
+								необходимо
+								отсортировать по нескольким корзинам, так как изделия разного материала, его плотности,
+								а так же
+								разного цвета и фасона требует индивидуального подхода не только при стирке, отжиме и
+								сушке белья,
 								но и при выборе моющих средств.</p>
 						</div>
 						<div class="carousel-item" data-interval="2000">
 							<img src="./assets/images/washing.jpeg" class="d-block w-100" alt="washing-machine-image">
-							<p class="p-4">Стирка проходит как правило в несколько этапов: замачивание, предварительная (грязная) стирка,
-								основная (чистая) стирка, полоскание. Замачивание используется для плотного материала изделий, либо
-								при наличии сложных загрязнений. В процессе предварительной стирки белье проходит дезинфекцию и
-								другие сан обработки. Основная стирка подразумевает под собой удаление остаточных загрязнений и
-								ароматизацию белья. При полоскании происходит окончательное удаление частиц моющих средств из
+							<p class="p-4">Стирка проходит как правило в несколько этапов: замачивание, предварительная
+								(грязная) стирка,
+								основная (чистая) стирка, полоскание. Замачивание используется для плотного материала
+								изделий, либо
+								при наличии сложных загрязнений. В процессе предварительной стирки белье проходит
+								дезинфекцию и
+								другие сан обработки. Основная стирка подразумевает под собой удаление остаточных
+								загрязнений и
+								ароматизацию белья. При полоскании происходит окончательное удаление частиц моющих
+								средств из
 								волокон ткани.</p>
 						</div>
 						<div class="carousel-item">
 							<img src="./assets/images/dry.jpeg" class="d-block w-100" alt="drying and ironing">
-							<p class="p-4">После стирки белье направляется в сушильные барабаны, где под воздействием температуры технолог
-								добивается влажности в 10% для того чтобы передать белье в глажку, где на специальном оборудование
+							<p class="p-4">После стирки белье направляется в сушильные барабаны, где под воздействием
+								температуры технолог
+								добивается влажности в 10% для того чтобы передать белье в глажку, где на специальном
+								оборудование
 								происходит процесс глажения и удаляется остаточная влажность. После белье маркируют (при
 								необходимости), складывают и упаковывают, после чего оно отправляется обратно к Вам.</p>
 						</div>
@@ -245,7 +278,8 @@
 
 				<div class="col-12 col-lg-4 text-center mb-4">
 					<h5>Укажите примерный вес белья в месяц (КГ)</h5>
-					<p class="mt-3">Укажите числовые значения напротив инересующих вас позиций белья для ненужных позиций остается
+					<p class="mt-3">Укажите числовые значения напротив инересующих вас позиций белья для ненужных
+						позиций остается
 						значение "0"</p>
 				</div>
 
@@ -278,15 +312,16 @@
 					</li>
 				</ul>
 
-				<div class="section__service_price_input mx-auto d-flex flex-column justify-content-center col-11 col-xl-4">
+				<div
+					class="section__service_price_input mx-auto d-flex flex-column justify-content-center col-11 col-xl-2">
 					<input name="weight" type="text">
 					<p class="mt-2 mb-0 text-white">Вес белье в кг</p>
 				</div>
 
-				<form class="mt-5 mt-xl-0 col-12 col-xl-4 d-flex flex-column">
-					<input name="fullName" placeholder="Имя" type="text">
-					<input name="phoneNumber" placeholder=Телефон type="text">
-					<button>Рассчитать стоимость услуг</button>
+				<form id="form2" class="mt-5 mt-xl-0 col-12 col-xl-4 d-flex flex-column">
+					<input name="fullName" placeholder="Имя" type="text" required>
+					<input id="phoneNumber2" name="phoneNumber" placeholder=Телефон type="text" required>
+					<button type="submit">Рассчитать стоимость услуг</button>
 				</form>
 			</div>
 		</section>
@@ -343,7 +378,7 @@
 
 			<div class="col-12 col-sm-6 col-md-3">
 				<p> <span style="color: #000; font-weight: 600;">Адрес:</span> Депутатская 45.К5</p>
-				<p><span style="color: #000; font-weight: 600;">Тел:</span> 
+				<p><span style="color: #000; font-weight: 600;">Тел:</span>
 					<a href="tel:+74952310940">+7(495)231-09-40</a>
 				</p>
 
@@ -356,24 +391,83 @@
 	</footer>
 
 
-	<!-- <script>
-        $("#services_types > li").each(i => {
-            console.log($(this).attr("data-active"))
-        })
-    </script> -->
+	<script>
+		$('#phoneNumber1').mask('+7 (000) 000-00-00');
+		$('#phoneNumber2').mask('+7 (000) 000-00-00');
+	</script>
 
-		<script>
-			$(".features_control ul li").click(function () {
-				$(this).addClass("selected");
-				$(this).siblings().removeClass("selected");
-			});
+	<script>
+		$(".features_control ul li").click(function () {
+			$(this).addClass("selected");
+			$(this).siblings().removeClass("selected");
+		});
 
-		
-			$(".navbar-nav .nav-item a").click(function () {
-				$(".navbar-nav").find(".active").removeClass("active");
-				$(this).addClass('active');
+
+		$(".navbar-nav .nav-item a").click(function () {
+			$(".navbar-nav").find(".active").removeClass("active");
+			$(this).addClass('active');
+		})
+	</script>
+
+	<script>
+		$('#form1').on('submit', async (e) => {
+			e.preventDefault();
+			const fullName = $('#form1').find('input[name="fullName"]').val();
+			const phoneNumber = $('#form1').find('input[name="phoneNumber"]').val();
+			Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: 'Ваш запрос был успешно отправлен!',
+				showConfirmButton: false,
+				timer: 1500
 			})
-		</script>
+			$('#form1').trigger('reset');
+
+			const response = await fetch('https://194.61.3.58:3040/api/form', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json;charset=utf-8'
+				},
+				body: JSON.stringify({
+					'name': fullName,
+					'phone': phoneNumber,
+					'email': '',
+					'message': ''
+				})
+			});
+			const result = await response.json();
+		})
+	</script>
+
+	<script>
+		$('#form2').on('submit', async (e) => {
+			e.preventDefault();
+			const fullName = $('#form2').find('input[name="fullName"]').val();
+			const phoneNumber = $('#form2').find('input[name="phoneNumber"]').val();
+			Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: 'Ваш запрос был успешно отправлен!',
+				showConfirmButton: false,
+				timer: 1500
+			})
+			$('#form2').trigger('reset');
+
+			const response = await fetch('https://194.61.3.58:3040/api/form', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json;charset=utf-8'
+				},
+				body: JSON.stringify({
+					'name': fullName,
+					'phone': phoneNumber,
+					'email': '',
+					'message': ''
+				})
+			});
+			const result = await response.json();
+		})
+	</script>
 
 </body>
 

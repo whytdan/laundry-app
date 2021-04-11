@@ -13,6 +13,10 @@
   scroll-behavior: smooth;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   width: 95%;
   max-width: 1300px;
@@ -193,7 +197,17 @@ nav .nav__inner_right ul li:hover::after {
   }
 }
 
-.hero button {
+.hero a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
   cursor: pointer;
   width: 550px;
   height: 50px;
@@ -208,18 +222,18 @@ nav .nav__inner_right ul li:hover::after {
 }
 
 @media screen and (max-width: 900px) {
-  .hero button {
+  .hero a {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .hero button {
+  .hero a {
     margin-top: 35px;
   }
 }
 
-.hero button:hover {
+.hero a:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -387,6 +401,7 @@ main h2 {
   cursor: pointer;
   -webkit-transition: all .5s;
   transition: all .5s;
+  text-decoration: none;
 }
 
 .section_intro__form form button:hover, .section_intro__form form a:hover {
@@ -651,7 +666,9 @@ main h2 {
 
 .section__service_price_input {
   height: 100px;
-  width: 320px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background-color: var(--secondary);
 }
 
