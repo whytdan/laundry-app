@@ -162,7 +162,7 @@ nav .nav__inner_right ul li:hover::after {
 }
 
 .navbar_content_divider {
-  height: 80px;
+  height: 75px;
 }
 
 @media screen and (max-width: 350px) {
@@ -197,7 +197,6 @@ nav .nav__inner_right ul li:hover::after {
 @media screen and (max-width: 450px) {
   .hero {
     padding-top: 0px;
-    height: 60vh !important;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -209,7 +208,7 @@ nav .nav__inner_right ul li:hover::after {
 
 @media screen and (max-width: 350px) {
   .hero {
-    height: 85vh !important;
+    height: 92vh !important;
   }
 }
 
@@ -558,7 +557,9 @@ main h2 {
 }
 
 .section__features_choose .features_control .carousel {
-  width: 65% !important;
+  width: 100% !important;
+  height: 80vh;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -569,18 +570,17 @@ main h2 {
 }
 
 .section__features_choose .features_control .carousel img {
-  height: 400px !important;
+  height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media screen and (max-width: 700px) {
-  .section__features_choose .features_control .carousel img {
-    height: 500px !important;
-  }
+.section__features_choose .features_control .carousel a {
+  z-index: 1000 !important;
 }
 
 .section__features_choose .features_control .carousel p {
+  max-width: 600px;
   top: 50%;
   font-size: 18px;
   -webkit-transform: translateY(-50%);
@@ -597,6 +597,7 @@ main h2 {
 @media screen and (max-width: 700px) {
   .section__features_choose .features_control .carousel p {
     font-size: 14px !important;
+    max-width: 300px;
   }
 }
 

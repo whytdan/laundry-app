@@ -142,7 +142,7 @@ nav{
 	} 
 }
 .navbar_content_divider{
-	height: 80px;
+	height: 75px;
 	@media screen and (max-width: 350px){
 		height: 50px;
 	}
@@ -169,13 +169,12 @@ nav{
 	}
 	@media screen and (max-width: 450px){
 		padding-top: 0px;
-		height: 60vh !important;
 		align-items: center;
     	display: flex;
 	}
 
 	@media screen and (max-width: 350px){
-		height: 85vh !important;
+		height: 92vh !important;
 	}
 
 	.hero__content{
@@ -438,20 +437,28 @@ main h2{
 	}
 
 	.features_control .carousel{
-		width: 65% !important;
+		width: 100% !important;
+		height: 80vh;
+		margin: 0 auto;
 		position: relative;
 		@media screen and (max-width: 993px){
 			width: 100% !important;
 		}
 		img{
-			height: 400px !important;
+			// height: 400px !important;
+			height: 80vh;
 			object-fit: cover;
-			@media screen and (max-width: 700px){
-				height: 500px !important;
-			}
-
 		}
-		p{
+		a{
+			z-index: 1000 !important;
+		}
+		// .carousel-control-next, .carousel-control-prev{
+		// 	@media screen and (max-width: 700px){
+		// 		top: -120px !important;
+		// 	}
+		// }
+		p{	
+			max-width: 600px;
 			top: 50%;
 			font-size: 18px;
 			transform: translateY(-50%);
@@ -464,6 +471,7 @@ main h2{
 			margin-right: auto; 
 			@media screen and (max-width: 700px){
 				font-size: 14px !important;
+				max-width: 300px;
 			}
 		}
 	}
