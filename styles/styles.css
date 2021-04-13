@@ -212,14 +212,16 @@ nav .nav__inner_right ul li:hover::after {
   }
 }
 
-.hero .hero__content {
+.hero e
+.hero__content {
   position: relative;
   width: 730px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 993px) {
-  .hero .hero__content {
+  .hero e
+.hero__content {
     width: auto;
     max-width: 280px;
   }
