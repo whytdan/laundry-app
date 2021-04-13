@@ -790,4 +790,167 @@ footer button:hover {
 .selected {
   background-color: var(--secondary) !important;
 }
+
+.section_calculator {
+  background-color: #F3F3F3;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.section_calculator_tabs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#weight_form {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--primary);
+  padding: 50px 30px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 375px) {
+  #weight_form {
+    width: 90%;
+    padding: 30px 15px;
+  }
+}
+
+#weight_form .form__select_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+#weight_form .form__select_wrapper select {
+  height: 50px;
+  border-radius: 15px;
+  padding: 0px 15px;
+}
+
+#weight_form .form__select_wrapper select:focus {
+  outline: none;
+}
+
+#weight_form button {
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: var(--secondary);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#weight_form button:focus {
+  outline: none;
+}
+
+#weight_form button:hover {
+  background-color: #fff;
+  color: #000;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.calculation_result_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.calculation_result_form p {
+  max-width: 700px;
+  width: 85%;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 550px) {
+  .calculation_result_form p {
+    margin-bottom: 10px;
+  }
+}
+
+.calculation_result_form img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  margin-top: -40px;
+  cursor: pointer;
+}
+
+.calculation_result_form form {
+  width: 100%;
+  max-width: 595px;
+}
+
+.calculation_result_form form input {
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 0 15px;
+}
+
+.calculation_result_form form input:focus {
+  outline: none;
+}
+
+.calculation_result_form form button {
+  margin-top: 30px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--secondary);
+  color: #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.calculation_result_form form button:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+@media screen and (max-width: 550px) {
+  .calculation_result_form form {
+    width: 85%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

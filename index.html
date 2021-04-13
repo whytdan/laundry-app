@@ -157,7 +157,7 @@
 						class="text-center d-flex d-sm-none">Сушка <br> и <br> глажка</li>
 				</ul>
 
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active" data-interval="10000">
 							<img src="./assets/images/sort.jpeg" class="d-block w-100" alt="towels-sorting-image">
@@ -198,78 +198,66 @@
 			</div>
 		</section>
 
-		<!-- <h2>Технологическая карта</h2>
-
-		<section class="section__features d-flex flex-wrap justify-content-between">
-			<div class="section__features_item">
-				<img src="./assets/images/sort.jpeg" alt="towels-sorting-image">
-				<h3>Сортировка</h3>
-				<p class="p-4">Перед тем как отправить белье в стирку, либо начать процесс замачивания его необходимо
-					отсортировать по нескольким корзинам, так как изделия разного материала, его плотности, а так же
-					разного цвета и фасона требует индивидуального подхода не только при стирке, отжиме и сушке белья,
-					но и при выборе моющих средств.</p>
-			</div>
-			<div class="section__features_item">
-				<img src="./assets/images/washing.jpeg" alt="washing-machine-image">
-				<h3>Стирка</h3>
-				<p class="p-4">
-					Стирка проходит как правило в несколько этапов: замачивание, предварительная (грязная) стирка,
-					основная (чистая) стирка, полоскание. Замачивание используется для плотного материала изделий, либо
-					при наличии сложных загрязнений. В процессе предварительной стирки белье проходит дезинфекцию и
-					другие сан обработки. Основная стирка подразумевает под собой удаление остаточных загрязнений и
-					ароматизацию белья. При полоскании происходит окончательное удаление частиц моющих средств из
-					волокон ткани.
-				</p>
-			</div>
-			<div class="section__features_item">
-				<img src="./assets/images/dry.jpeg" alt="drying and ironing">
-				<h3>Сушка и глажка</h3>
-				<p class="p-4">
-					После стирки белье направляется в сушильные барабаны, где под воздействием температуры технолог
-					добивается влажности в 10% для того чтобы передать белье в глажку, где на специальном оборудование
-					происходит процесс глажения и удаляется остаточная влажность. После белье маркируют (при
-					необходимости), складывают и упаковывают, после чего оно отправляется обратно к Вам.
-				</p>
-			</div>
-		</section> -->
-
-		<!-- <h2>Наши партнеры</h2>
-
-		<section class="section__partners row">
-			<div class="section__partners_item col-12 col-lg-4">
-				<img src="./assets/images/hotel.jpeg" alt="hotel image">
-				<h3>Отели, Хостелы, Общежития</h3>
-			</div>
-
-			<div class="section__partners_item col-12 col-lg-4">
-				<img src="./assets/images/sanatory.jpeg" alt="sanatory image">
-				<h3>Санатории, базы отдыха</h3>
-			</div>
-
-			<div class="section__partners_item col-12 col-lg-4">
-				<img src="./assets/images/medical.jpeg" alt="medical center image">
-				<h3>Мед. Учреждения</h3>
-			</div>
-
-			<div class="section__partners_item col-12 col-lg-4">
-				<img src="./assets/images/public_catering.jpeg" alt="public catering image">
-				<h3>Общепиты</h3>
-			</div>
-
-			<div class="section__partners_item col-12 col-lg-4">
-				<img src="./assets/images/laundry.jpeg" alt="laundry image">
-				<h3>Стирка для предприятий</h3>
-			</div>
-
-			<div class="section__partners_item col-12 col-lg-4">
-				<img src="./assets/images/shop.jpeg" alt="shop image">
-				<h3>Прочии компании</h3>
-			</div>
-		</section> -->
-
 		<h2 id="calculator">Калькулятор услуг</h2>
 
-		<section class="section__service_price py-4">
+		<section class="section_calculator">	
+			<form id="weight_form" class="calculators_tabs_item">
+				<div class="form__select_wrapper">
+					<label for="companyType">Организация</label>
+					<select name="companyType" id="companyTypeSelect">
+						<option value="Отели">Отели</option>
+						<option value="Хостелы">Хостелы</option>
+						<option value="Базы отдыха">Базы отдыха</option>
+						<option value="Фитнес клубы">Фитнес клубы</option>
+						<option value="Общежития">Общежития</option>
+						<option value="Ресторан">Ресторан</option>
+						<option value="Кафе">Кафе</option>
+						<option value="Кейтеринг">Кейтеринг</option>
+						<option value="Спа салон">Спа салон</option>
+						<option value="Мед учреждение">Мед учреждение</option>
+					</select>
+				</div>
+
+				<div class="form__select_wrapper">
+					<label for="weightType">Вес белья в кг</label>
+					<select name="weightType" id="weightTypeSelect">
+						<option value="0-500">до 500</option>
+						<option value="500-1000">500-1000</option>
+						<option value="1000-2000">1000-2000</option>
+						<option value="2000-4000">2000-4000</option>
+						<option value="4000+">Более 4000</option>
+					</select>
+				</div>
+
+				<button type="submit">
+					Рассчитать стоимость услуг
+				</button>
+			</form>
+
+			<div class="section_calculator_tabs">
+				<div class="calculators_tabs_item">
+					<div class="calculation_result_form">
+						<p>
+							стоимость стирки составляет <span style="color: #000; font-weight: 600;" id="calculated_price">45 руб/кг</span>
+							Нам нужно так же уточнить ваше местоположение, частоту доставки, и учесть ваши пожелания по
+							обслуживанию.
+							Конечная цена может немного измениться как в большую так и в меньшую сторону.
+							Оставьте номер телефона и мы свяжемся с вами для уточнения необходимой информации
+						</p>
+ 
+						<form id="form2" class="mt-3 mt-xl-0 d-flex flex-column">
+							<input name="fullName" placeholder="Имя" type="text" required>
+							<input id="phoneNumber2" name="phoneNumber" placeholder=Телефон type="text" required>
+							<button type="submit">Отправить</button>
+						</form>
+
+						<img id="back-tab-icon" src="./assets/icons/back.svg" alt="back-icon">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class="section__service_price py-4">
 			<div class="row section">
 				<div class="col-12 col-lg-4 text-center mb-4">
 					<h5>Тип вашей организации</h5>
@@ -324,7 +312,7 @@
 					<button type="submit">Рассчитать стоимость услуг</button>
 				</form>
 			</div>
-		</section>
+		</section> -->
 	</main>
 
 
@@ -466,6 +454,61 @@
 				})
 			});
 			const result = await response.json();
+		})
+	</script>
+
+	<script>
+		$('.calculators_tabs_item').not(":first").hide();
+	</script>
+
+	<script>
+		$('#back-tab-icon').on('click', () => {
+			$('.calculators_tabs_item').hide().eq(0).fadeIn();
+		})
+	</script>
+
+	<script>
+		const companyTypes1 = ['Отели', 'Хостелы', 'Базы отдыха', 'Фитнес клубы', 'Общежития'];
+		const companyTypes2 = ['Ресторан', 'Кафе', 'Кейтеринг', 'Спа салон', 'Мед учреждение'];
+
+		const pricing = {
+			"0-500": {
+				50: companyTypes1,
+				55: companyTypes2
+			},
+			"500-1000": {
+				42: companyTypes1,
+				55: companyTypes2
+			},
+			"1000-2000": {
+				35: companyTypes1,
+				45: companyTypes2
+			},
+			"2000-4000": {
+				35: companyTypes1,
+				45: companyTypes2
+			},
+			"4000+": {
+				35: companyTypes1,
+				45: companyTypes2
+			}
+		}
+
+		$('#weight_form').on('submit', (e) => {
+			e.preventDefault();
+			const companyType = $('#companyTypeSelect').find(":selected").text();
+			const weightType = $('#weightTypeSelect').find(":selected").text();
+
+			const weightTypeValue = $('#weightTypeSelect').find(":selected").val();
+
+			const selectedPrice = pricing[weightTypeValue];
+			for (const [key, value] of Object.entries(selectedPrice)) {
+				if (value.includes(companyType)) {
+					$('#calculated_price').text(`${key} руб/кг`)
+					$('.calculators_tabs_item').hide().eq(1).fadeIn();
+					break;
+				}
+			}
 		})
 	</script>
 
