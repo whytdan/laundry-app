@@ -175,7 +175,7 @@ nav{
 
 	@media screen and (max-width: 350px){
 		height: 92vh !important;
-	}e
+	}
 
 	.hero__content{
 		position: relative;
@@ -822,4 +822,10 @@ footer{
 		}
 
 	}
+}
+#calculated_price{
+	font-size: 24px;
+	display: block;
+	text-align: center;
+	margin: 10px auto;
 }
